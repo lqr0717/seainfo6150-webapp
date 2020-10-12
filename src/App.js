@@ -14,7 +14,7 @@ function App() {
         
       );
       const responseJson = await response.json();
-      setFetchedData(responseJson.data);
+      setFetchedData(responseJson);
     };
 
     if (isEmpty(fetchedData)) {
