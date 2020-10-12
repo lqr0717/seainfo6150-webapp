@@ -6,6 +6,13 @@ const DynamicArticle = (props) => {
     <article>
       {/* this is an example of how you insert props into a react component */}
       <div>{props.article.title}</div>
+      
+      <address>
+        {props.article.author}(
+          {props.article.authorEmail}
+        )
+      </address>
+      <time dateTime = {props.article.timeStamp}>{props.article.displayDate}</time>
       <HTMLText text={props.article.text} />
     </article>
   );
