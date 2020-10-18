@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { Switch, Route } from "react-router-dom";
-import Article from "./Article/Article";
 import DynamicArticle from "./DynamicArticle/DynamicArticle";
 import { isEmpty } from "lodash";
+import ArticleList from "./ArticleList/ArticleList";
 
 function App() {
   const [fetchedData, setFetchedData] = useState({});
@@ -22,11 +22,12 @@ function App() {
   }, [fetchedData]);
 
   return isEmpty(fetchedData) ? null : (
-    <div className="App">
+    <div className= "App">
       <Switch>
-        <Route>
-          <DynamicArticle article={Object.values(fetchedData)[1]} />
+        <Route exact path="/articlelist">
+          <ArticleList articles={Object.values(fetchedData)} />
         </Route>
+        <Route><DynamicArticle article={Object.values(fetchedData)[1]} /></Route>
       </Switch>
     </div>
   );
