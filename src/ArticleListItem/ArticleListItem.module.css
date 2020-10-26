@@ -1,0 +1,20 @@
+.header{
+    font-size:  30px;
+    color:red;
+
+}
+.time {
+    font-weight: bold;
+    font-size: 15px;
+}
+.shortText {
+    font-size: 15px;
+}
+.container {
+    
+    margin-bottom: 30px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(120, 15, 15), white 15%);
+    box-shadow: rgb(39, 38, 38) 0px 0px 10px;
+}

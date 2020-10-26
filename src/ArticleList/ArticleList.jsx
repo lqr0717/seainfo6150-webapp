@@ -1,8 +1,10 @@
 import React from "react";
 import ArticleListItem from "../ArticleListItem/ArticleListItem";
 import PropTypes from "prop-types";
+import styles from "./ArticleList.module.css"
 
 const ArticleList = (props) => {
+
     let displayContent;
     if (props.articles.length) {
         displayContent = (
@@ -16,9 +18,9 @@ const ArticleList = (props) => {
         displayContent = <div>You have no data!</div>;
       }
     return (
-        <section>
+        <div className = {styles.listStyle} >
           {displayContent}
-        </section>
+        </div>
       );
 };
 
@@ -27,3 +29,5 @@ ArticleList.propTypes = {
 };
 
 export default ArticleList;
+
+
