@@ -1,51 +1,39 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./ArticleListItem.module.css"
-import ArticleTextToggleButton from "../ArticleTextToggleButton/ArticleTextToggleButton";
+import styles from "./ArticleListItem.module.css";
+import ArticleTextToggleButton from "../ArticleTextToggleButton/ArticleTextToggleButton.jsx";
 
 const ArticleListItem = (props) => {
-    //console.log(props.article);
-    
-    const [showAriticle, SetshowArticle] = useState({                
-        shortText: '',
-        displayDate : '',
-        buttonText :'Show More'});
-    function handleClick() {
-        if (showAriticle.buttonText == 'Show More') {
-            SetshowArticle({
-                shortText: props.article.shortText,
-                displayDate :props.article.displayDate,
-                buttonText :'Show Less'
-            });
-               
-        } else {
-            SetshowArticle({
-                shortText: '',
-                displayDate: '',
-                buttonText :'Show More'
-            });
-        }
-        
-    }
-    //console.log(showAriticle);
+  const [isTextShowing, setIsTextShowing] = useState(false);
 
-    return (
-        <article className = {styles.container}>
-            <header> 
-                <h1 className = {styles.header}>
-                {props.article.title}
-                </h1>
-            </header>
-            <p className = {styles.shortText}>{showAriticle.shortText}</p>
-            <time className = {styles.time} dateTime = {props.article.timeStamp}>
-                {showAriticle.displayDate}
-                </time> <br />
-            <p> </p>
-            <ArticleTextToggleButton buttonText = {showAriticle.buttonText} onClick = {handleClick}/> 
-        </article>
+  function onClick() {
+    setIsTextShowing(!isTextShowing);
+  }
 
-      );
-    };
+  return (
+    <div className={styles.container}>
+      <article id = "styles.gridrf" className={styles.article}>
+        <div  >
+          <h2 className={styles.title}>{props.article.title}</h2>
+          {isTextShowing && (
+            <div className={styles.text}>
+              <p>{props.article.shortText}</p>
+              <time className={styles.time} dateTime={props.article.timeStamp}>
+                {props.article.displayDate}
+              </time>
+            </div>
+          )}
+        </div>
+        <ArticleTextToggleButton
+          buttonText={isTextShowing ? "Show less" : "Show more"}
+          onClick={onClick}
+        />
+      </article>
+    </div>
+  );
+};
 
+ArticleListItem.propTypes = {
+  article: PropTypes.object.isRequired,
+};
 export default ArticleListItem;
-

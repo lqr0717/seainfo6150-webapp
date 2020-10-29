@@ -1,8 +1,19 @@
-.listStyle {
+
+.listContainer {
     background-color: grey;
     padding: 20px;
     border-radius: 10px;
-    margin: 50px;
     box-shadow: red 0px 0px 10px;
 }
 
+.listStyle {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    position: relative;
+}
+
+.listStyle > li {
+    width: 33.3%;
+    padding: 10px 5px;
+}

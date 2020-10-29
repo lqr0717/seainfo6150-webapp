@@ -1,20 +1,26 @@
-.header{
-    font-size:  30px;
-    color:red;
-
+.container {
+    background-image: linear-gradient(to right, rgba(204, 0, 0, .5), #eee 20% ) ;
+    border: 1px solid #c00;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, .3);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    height: 100%;
 }
+
+
+.title {
+    color: #c00;
+    text-decoration: underline;
+    margin: 0 0 20px;
+    height: 60px;
+}
+
+.text {
+    font-size: 12px;
+    margin: 0 0 20px;
+}
+
 .time {
     font-weight: bold;
-    font-size: 15px;
-}
-.shortText {
-    font-size: 15px;
-}
-.container {
-    
-    margin-bottom: 30px;
-    border: 1px solid red;
-    border-radius: 10px;
-    background: linear-gradient(to right, rgb(120, 15, 15), white 15%);
-    box-shadow: rgb(39, 38, 38) 0px 0px 10px;
 }
