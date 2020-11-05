@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
  const ArticleTextToggleButton = (props) => {
     return(
-        <div>
+        <div className ={styles.centerornot}>
             <button className = {styles.ToggleButton} onClick={props.onClick}>{props.buttonText}</button>
         </div>
     );

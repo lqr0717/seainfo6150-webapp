@@ -1,19 +1,31 @@
-
-.listContainer {
-    background-color: grey;
-    padding: 20px;
+.container {
+    background: #999;
+    border: 1px dashed #666;
     border-radius: 10px;
-    box-shadow: red 0px 0px 10px;
-}
+    box-shadow: 0px 0px 10px 5px rgba(204, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    padding: 15px;
+  }
 
-.listStyle {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    position: relative;
-}
+@supports (display: grid) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
-.listStyle > li {
-    width: 33.3%;
-    padding: 10px 5px;
+  @media screen and (min-width: 600px) {
+    .container {
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .container {
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }

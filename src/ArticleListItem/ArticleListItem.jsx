@@ -12,7 +12,7 @@ const ArticleListItem = (props) => {
 
   return (
     <div className={styles.container}>
-      <article id = "styles.gridrf" className={styles.article}>
+      <article id = "styles.container" className={styles.article}>
         <div  >
           <h2 className={styles.title}>{props.article.title}</h2>
           {isTextShowing && (
