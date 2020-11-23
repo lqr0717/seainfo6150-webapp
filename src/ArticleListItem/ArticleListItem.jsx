@@ -14,7 +14,7 @@ const ArticleListItem = (props) => {
   return (
     <li className={styles.container}>
       <article className={styles.article}>
-        <ArticleImage title = {props.article.title} url = {props.article.imgage._url} /> 
+        <ArticleImage title = {props.article.title} url = {props.article.image._url} /> 
         <div className={styles.wrapper}>
           <h2 className={styles.title}>{props.article.title}</h2>
           {isTextShowing && (

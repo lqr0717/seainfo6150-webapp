@@ -1,6 +1,7 @@
 .image {
-    border: 7px solid red;
-    width: 60%;
+    border: 5px solid red;
+    border-radius: 50%;
+    width: 50%;
     margin: 10px 0px 10px 0px;
     display: flex;
     align-items: flex-start;
